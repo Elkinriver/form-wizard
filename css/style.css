@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:100');
+*{
+	margin:0;
+	padding: 0;
+}
+:root{
+	--background-form: #f3f5f7;
+	--background-principal:#1d63b7;
+}
+body{
+	background: var(--background-form);
+	font-family: 'Barlow', sans-serif;
+}
+.container{
+	width: 98%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+main{
+	width: 85%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+}
+data{
+	padding: 0.6em;
+	padding-top: 4em;
+	width: 30%;
+    height: 22em;
+    background: #fff;
+    margin: 0.3em;
+    border: 1px solid rgba(200,215,225,0.5);
+    text-align: center;
+}
+data img{
+	width: 80%;
+    padding: 2em;
+}
+/*Input de los radios */
+ input[type=radio] {
+	display:none; 
+        }
+    input[type=radio] + label img {
+	cursor: pointer;
+   }
+    input[type=radio]:checked + label img {
+	width: 70%;
+	  filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transition: filter 0.1s;
+    -webkit-transition: -webkit-filter 0.2s;
+    }
+
+/*--RESPONSIVE DESIGN-- */
+@media (max-width: 1024px) {
+	main{
+		width: 100%;
+	}
+	data{
+		width: 45%;
+	}
+}
+@media (max-width: 640px) {
+data{
+	width: 44.5%;
+}
+@media (max-width: 480px) {
+data{
+	width: 100%;
+}
+}
